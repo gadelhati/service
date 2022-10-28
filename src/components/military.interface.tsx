@@ -7,4 +7,5 @@ export interface Military {
     fullName: string,
     active: boolean,
     lastService: number,
+    time: boolean,
 }

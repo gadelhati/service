@@ -8,5 +8,6 @@ export const militaryInitial : Military = {
     name: "",
     fullName: "",
 	active: true,
-	lastService: 0
+	lastService: 0,
+    time: true
 }

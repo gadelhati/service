@@ -7,7 +7,8 @@
 		"name": "FIDELIS",
 		"fullName": "ANDERSON FIDELIS COUTO",
 		"active": false,
-		"lastService": 3
+		"lastService": 3,
+		"time": true
 	},
 	{
 		"antique": 1001613,
@@ -17,7 +18,8 @@
 		"name": "GADELHA",
 		"fullName": "MARCELO RIBEIRO GADELHA",
 		"active": true,
-		"lastService": 2
+		"lastService": 2,
+		"time": true
 	},
 	{
 		"antique": 1002055,
@@ -27,7 +29,8 @@
 		"name": "MILANEZ",
 		"fullName": "CARLOS MILANEZ FERNANDES",
 		"active": true,
-		"lastService": 8
+		"lastService": 8,
+		"time": true
 	},
 	{
 		"antique": 2000111,
@@ -37,7 +40,8 @@
 		"name": "CAVALCANTI",
 		"fullName": "TIAGO RIOS CAVALCANTI",
 		"active": false,
-		"lastService": 1
+		"lastService": 1,
+		"time": true
 	},
 	{
 		"antique": 2000112,
@@ -47,7 +51,8 @@
 		"name": "ANDREA",
 		"fullName": "ANDREA OLIVEIRA ALCANTARA",
 		"active": true,
-		"lastService": 4
+		"lastService": 4,
+		"time": true
 	},
 	{
 		"antique": 2000891,
@@ -57,7 +62,8 @@
 		"name": "PEIXOTO",
 		"fullName": "JEFERSON LIMA PEIXOTO JUNIOR",
 		"active": true,
-		"lastService": 3
+		"lastService": 3,
+		"time": true
 	},
 	{
 		"antique": 2000904,
@@ -67,7 +73,8 @@
 		"name": "NEVES",
 		"fullName": "THIAGO NEVES MAGALHÃES",
 		"active": true,
-		"lastService": 1
+		"lastService": 1,
+		"time": true
 	},
 	{
 		"antique": 2001208,
@@ -77,7 +84,8 @@
 		"name": "CRISOSTOMO",
 		"fullName": "JEAN DA SILVA CRISOSTOMO",
 		"active": true,
-		"lastService": 2
+		"lastService": 2,
+		"time": true
 	},
 	{
 		"antique": 3000688,
@@ -87,7 +95,8 @@
 		"name": "PATRÍCIA",
 		"fullName": "PATRÍCIA COUTO BOMFIM JANUARIO",
 		"active": true,
-		"lastService": 5
+		"lastService": 5,
+		"time": true
 	},
 	{
 		"antique": 3000365,
@@ -97,7 +106,8 @@
 		"name": "PRISCILA",
 		"fullName": "PRISCILA CARDOSO DOS SANTOS",
 		"active": true,
-		"lastService": 2
+		"lastService": 2,
+		"time": true
 	},
 	{
 		"antique": 3000827,
@@ -107,7 +117,8 @@
 		"name": "COSTA",
 		"fullName": "DIEGO SIQUEIRA COSTA",
 		"active": true,
-		"lastService": 4
+		"lastService": 4,
+		"time": true
 	},
 	{
 		"antique": 3001506,
@@ -117,7 +128,8 @@
 		"name": "JÉSSICA",
 		"fullName": "JÉSSICA DA SILVA GUIMARÃES",
 		"active": true,
-		"lastService": 5
+		"lastService": 5,
+		"time": true
 	},
 	{
 		"antique": 3001840,
@@ -127,17 +139,8 @@
 		"name": "VENTURA",
 		"fullName": "FILIPE MARQUES VENTURA DOS SANTOS",
 		"active": true,
-		"lastService": 9
-	},
-	{
-		"antique": 3999999,
-		"graduation": "3ºSG",
-		"specialty": "PD",
-		"nip": "15.1984.72",
-		"name": "FLORENTINO",
-		"fullName": "RODRIGO SOUZA FLORENTINO",
-		"active": true,
-		"lastService": 9
+		"lastService": 9,
+		"time": true
 	},
 	{
 		"antique": 3001948,
@@ -147,7 +150,8 @@
 		"name": "ARIANE",
 		"fullName": "ARIANE COELHO PINTO",
 		"active": true,
-		"lastService": 9
+		"lastService": 9,
+		"time": false
 	},
 	{
 		"antique": 3999998,
@@ -157,6 +161,18 @@
 		"name": "AUGUSTO",
 		"fullName": "MATEUS AUGUSTO COELHO QUEIROZ PINTO",
 		"active": true,
-		"lastService": 4
+		"lastService": 4,
+		"time": true
+	},
+	{
+		"antique": 3999999,
+		"graduation": "3ºSG",
+		"specialty": "PD",
+		"nip": "15.1984.72",
+		"name": "FLORENTINO",
+		"fullName": "RODRIGO SOUZA FLORENTINO",
+		"active": true,
+		"lastService": 9,
+		"time": false
 	}
 ]
