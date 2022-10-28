@@ -4,22 +4,20 @@ import { Military } from "./military.interface"
 import list from "./list.json"
 
 export const MilitaryList = () => {
-    const semana:string [] = ["D: ", "S: ", "T: ", "Q: ", "Q: ", "S: ", "S: "]
+    const [scale, setScale] = useState<string[]>([])
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
     const [militaryCurrent, setMilitaryCurrent] = useState<Military>(militaryInitial)
 
-    const couting = (): number => {
+    const couting = (activation: boolean): number => {
         let vector: number = 0
-        militaryList?.map( element => { if(element.active) return vector+=1 })
+        militaryList?.map( element => { if(element.active == activation) return vector+=1 })
         return vector
     }
-    const search = (): Military => {
+    const nextService = (): Military => {
         console.log("4")
         let service: Military = militaryInitial
         militaryList?.map( element => {
-            // who gave the service in the shortest time
             if(element.active && element.lastService >= service.lastService) {
-                // if they served the same amount of time, the most modern wins
                 if(element.lastService == service.lastService) {
                     if(element.antique > service.antique) {
                         service = element
@@ -29,11 +27,13 @@ export const MilitaryList = () => {
                 }
             }
         })
-        // setMilitaryList([...militaryList.filter(item => item.nip !== service.nip)])
         return service
     }
-    const gadelha = () => {
-        setMilitaryList(militaryList.filter(item => item !== search()))
+    const assign = () => {
+        let service: Military = nextService()
+        setScale([...scale, service.name])
+        setMilitaryList(militaryList.filter(item => item !== service))
+        setMilitaryCurrent(service)
     }
     const julianDay = (): any => {
         var d = new Date().getDate();
@@ -43,9 +43,9 @@ export const MilitaryList = () => {
     }
     return (
         <>
-            {couting()}
-            {search().name}
-            <button onClick={gadelha} >ok</button>
-            {/* {JSON.stringify(gadelha())} */}
+            {couting(true)}
+            {nextService().name}
+            <button onClick={assign} >ok</button>
+            {JSON.stringify(scale)}
         </>)
 }

@@ -6,7 +6,7 @@
 		"nip": "00.0386.79",
 		"name": "FIDELIS",
 		"fullName": "ANDERSON FIDELIS COUTO",
-		"active": true,
+		"active": false,
 		"lastService": 3
 	},
 	{
@@ -36,7 +36,7 @@
 		"nip": "06.7170.71",
 		"name": "CAVALCANTI",
 		"fullName": "TIAGO RIOS CAVALCANTI",
-		"active": true,
+		"active": false,
 		"lastService": 1
 	},
 	{
