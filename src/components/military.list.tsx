@@ -6,17 +6,16 @@ import list from "./list.json"
 export const MilitaryList = () => {
     const [scale, setScale] = useState<string[]>([])
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
-    const [militaryCurrent, setMilitaryCurrent] = useState<Military>(militaryInitial)
+    // const [militaryCurrent, setMilitaryCurrent] = useState<Military>(militaryInitial)
 
     const couting = (activation: boolean): number => {
         let vector: number = 0
         militaryList?.map( element => { if(element.active == activation) return vector+=1 })
         return vector
     }
-    const nextService = (): Military => {
-        console.log("4")
+    const nextService = (militaries: Military[]): Military => {
         let service: Military = militaryInitial
-        militaryList?.map( element => {
+        militaries?.map( element => {
             if(element.active && element.lastService >= service.lastService) {
                 if(element.lastService == service.lastService) {
                     if(element.antique > service.antique) {
@@ -30,10 +29,14 @@ export const MilitaryList = () => {
         return service
     }
     const assign = () => {
-        let service: Military = nextService()
+        let service: Military = nextService(militaryList)
         setScale([...scale, service.name])
-        setMilitaryList(militaryList.filter(item => item !== service))
-        setMilitaryCurrent(service)
+        service.lastService = 0
+        militaryList.filter(item => item !== service).map( element => {
+            element.lastService += 1
+        })
+        setMilitaryList([...militaryList.filter(item => item !== service), service])
+        // setMilitaryCurrent(service)
     }
     const julianDay = (): any => {
         var d = new Date().getDate();
@@ -43,9 +46,8 @@ export const MilitaryList = () => {
     }
     return (
         <>
-            {couting(true)}
-            {nextService().name}
+            <div>{couting(true)}</div>
             <button onClick={assign} >ok</button>
-            {JSON.stringify(scale)}
+            <div>{scale}</div>
         </>)
 }

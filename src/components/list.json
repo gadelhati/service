@@ -47,7 +47,7 @@
 		"name": "ANDREA",
 		"fullName": "ANDREA OLIVEIRA ALCANTARA",
 		"active": true,
-		"lastService": 5
+		"lastService": 4
 	},
 	{
 		"antique": 2000891,
@@ -130,6 +130,16 @@
 		"lastService": 9
 	},
 	{
+		"antique": 3999999,
+		"graduation": "3ºSG",
+		"specialty": "PD",
+		"nip": "15.1984.72",
+		"name": "FLORENTINO",
+		"fullName": "RODRIGO SOUZA FLORENTINO",
+		"active": true,
+		"lastService": 9
+	},
+	{
 		"antique": 3001948,
 		"graduation": "3ºSG",
 		"specialty": "PD",
@@ -137,7 +147,7 @@
 		"name": "ARIANE",
 		"fullName": "ARIANE COELHO PINTO",
 		"active": true,
-		"lastService": 6
+		"lastService": 9
 	},
 	{
 		"antique": 3999998,
@@ -148,15 +158,5 @@
 		"fullName": "MATEUS AUGUSTO COELHO QUEIROZ PINTO",
 		"active": true,
 		"lastService": 4
-	},
-	{
-		"antique": 3999999,
-		"graduation": "3ºSG",
-		"specialty": "PD",
-		"nip": "15.1984.72",
-		"name": "FLORENTINO",
-		"fullName": "RODRIGO SOUZA FLORENTINO",
-		"active": true,
-		"lastService": 7
 	}
 ]
