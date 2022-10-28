@@ -9,18 +9,18 @@ export const MilitaryList = () => {
 
     const couting = (activation: boolean): number => {
         let vector: number = 0
-        militaryList?.map( element => { if(element.active == activation) return vector+=1 })
+        militaryList?.map(element => { if (element.active == activation) return vector += 1 })
         return vector
     }
     const nextService = (militaries: Military[]): Military => {
         let service: Military = militaryInitial
-        militaries?.map( element => {
-            if(element.active && element.lastService >= service.lastService) {
-                if(element.lastService == service.lastService) {
-                    if(element.antique > service.antique) {
+        militaries?.map(element => {
+            if (element.active && element.lastService >= service.lastService) {
+                if (element.lastService == service.lastService) {
+                    if (element.antique > service.antique) {
                         service = element
                     }
-                } else if(element.lastService != 7) {
+                } else if (element.lastService != 7) {
                     service = element
                 }
             }
@@ -33,7 +33,7 @@ export const MilitaryList = () => {
         setScale([...scale, service1.name, service2.name])
         service1.lastService = 0
         service2.lastService = 0
-        militaryList.filter(item => item !== service1 || item !== service2).map( element => {
+        militaryList.filter(item => item !== service1 || item !== service2).map(element => {
             element.lastService += 1
         })
         addList(service1)
@@ -45,8 +45,9 @@ export const MilitaryList = () => {
     }
     return (
         <>
-            <div>{couting(true)}</div>
-            <button onClick={assign} >ok</button>
-            <div>{scale}</div>
+            <button onClick={assign} >Assign {couting(true)}</button>
+            {scale.map((element, index) =>
+                <p>{element}</p>
+            )}
         </>)
 }
