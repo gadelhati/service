@@ -29,14 +29,21 @@ export const MilitaryList = () => {
         return service
     }
     const assign = () => {
-        let service: Military = nextService(militaryList)
-        setScale([...scale, service.name])
-        service.lastService = 0
-        militaryList.filter(item => item !== service).map( element => {
+        let service1: Military = nextService(militaryList)
+        let service2: Military = nextService(militaryList.filter(item => item !== service1))
+        setScale([...scale, service1.name, service2.name])
+        service1.lastService = 0
+        service2.lastService = 0
+        militaryList.filter(item => item !== service1 || item !== service2).map( element => {
             element.lastService += 1
         })
-        setMilitaryList([...militaryList.filter(item => item !== service), service])
+        addList(service1)
+        addList(service2)
+        console.log(militaryList)
         // setMilitaryCurrent(service)
+    }
+    const addList = (military: Military) => {
+        setMilitaryList([...militaryList.filter(item => item != military), military])
     }
     const julianDay = (): any => {
         var d = new Date().getDate();
