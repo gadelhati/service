@@ -20,7 +20,7 @@ export const MilitaryList = () => {
                     if(element.antique > service.antique) {
                         service = element
                     }
-                } else {
+                } else if(element.lastService != 7) {
                     service = element
                 }
             }
