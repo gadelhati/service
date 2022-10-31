@@ -9,6 +9,6 @@ export const militaryInitial : Military = {
     fullName: "",
 	active: true,
 	lastService: 0,
-    time: true,
+    horary: true,
     dateOfService: "",
 }

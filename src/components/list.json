@@ -8,7 +8,7 @@
 		"fullName": "ANDERSON FIDELIS COUTO",
 		"active": false,
 		"lastService": 3,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -20,7 +20,7 @@
 		"fullName": "MARCELO RIBEIRO GADELHA",
 		"active": true,
 		"lastService": 2,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -32,7 +32,7 @@
 		"fullName": "CARLOS MILANEZ FERNANDES",
 		"active": true,
 		"lastService": 8,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -44,7 +44,7 @@
 		"fullName": "TIAGO RIOS CAVALCANTI",
 		"active": false,
 		"lastService": 1,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -56,7 +56,7 @@
 		"fullName": "ANDREA OLIVEIRA ALCANTARA",
 		"active": true,
 		"lastService": 4,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -68,7 +68,7 @@
 		"fullName": "JEFERSON LIMA PEIXOTO JUNIOR",
 		"active": true,
 		"lastService": 3,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -80,7 +80,7 @@
 		"fullName": "THIAGO NEVES MAGALHÃES",
 		"active": true,
 		"lastService": 1,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -92,7 +92,7 @@
 		"fullName": "JEAN DA SILVA CRISOSTOMO",
 		"active": true,
 		"lastService": 2,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -104,7 +104,7 @@
 		"fullName": "PATRÍCIA COUTO BOMFIM JANUARIO",
 		"active": true,
 		"lastService": 5,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -116,7 +116,7 @@
 		"fullName": "PRISCILA CARDOSO DOS SANTOS",
 		"active": true,
 		"lastService": 2,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -128,7 +128,7 @@
 		"fullName": "DIEGO SIQUEIRA COSTA",
 		"active": true,
 		"lastService": 4,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -140,7 +140,7 @@
 		"fullName": "JÉSSICA DA SILVA GUIMARÃES",
 		"active": true,
 		"lastService": 5,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -152,7 +152,7 @@
 		"fullName": "FILIPE MARQUES VENTURA DOS SANTOS",
 		"active": true,
 		"lastService": 9,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -164,7 +164,7 @@
 		"fullName": "ARIANE COELHO PINTO",
 		"active": true,
 		"lastService": 9,
-		"time": false,
+		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -176,7 +176,7 @@
 		"fullName": "MATEUS AUGUSTO COELHO QUEIROZ PINTO",
 		"active": true,
 		"lastService": 4,
-		"time": true,
+		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
@@ -188,7 +188,7 @@
 		"fullName": "RODRIGO SOUZA FLORENTINO",
 		"active": true,
 		"lastService": 9,
-		"time": false,
-		"dateOfService": "2022-10-21"
+		"horary": false,
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	}
 ]
