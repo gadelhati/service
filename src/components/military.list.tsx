@@ -30,12 +30,12 @@ export const MilitaryList = () => {
         return service
     }
     const nextTime = (original: Military, teste: Military): boolean => {
-        if(original.time !== teste.time) {
-            return !original.time
+        if(original.horary !== teste.horary) {
+            return !original.horary
         } else if(original.antique > teste.antique) {
-            return original.time
+            return original.horary
         } else {
-            return !original.time
+            return !original.horary
         }
     }
     const assign = () => {
@@ -43,8 +43,8 @@ export const MilitaryList = () => {
         let service2: Military = nextService(militaryList.filter(item => item !== service1))
         service1.lastService = 0
         service2.lastService = 0
-        service1.time = nextTime(service1, service2)
-        service2.time = !service1.time
+        service1.horary = nextTime(service1, service2)
+        service2.horary = !service1.horary
         militaryList.filter(item => item !== service1 || item !== service2).map(element => {
             element.lastService += 1
         })
@@ -53,7 +53,7 @@ export const MilitaryList = () => {
         setService1(service1)
         setService2(service2)
         console.log(new Date(new Date().setDate(new Date(service1.dateOfService).getDate() + 50)))
-        setScale([...scale, service1.name+" "+service1.time, service2.name+" "+service2.time])
+        setScale([...scale, service1.name+" "+service1.horary, service2.name+" "+service2.horary])
     }
     const addMilitaryList = (military: Military) => {
         setMilitaryList([...militaryList.filter(item => item != military), military])
