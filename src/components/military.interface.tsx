@@ -8,4 +8,5 @@ export interface Military {
     active: boolean,
     lastService: number,
     time: boolean,
+    dateOfService: string,
 }

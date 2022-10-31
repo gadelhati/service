@@ -52,6 +52,7 @@ export const MilitaryList = () => {
         addMilitaryList(service2)
         setService1(service1)
         setService2(service2)
+        console.log(new Date(new Date().setDate(new Date(service1.dateOfService).getDate() + 50)))
         setScale([...scale, service1.name+" "+service1.time, service2.name+" "+service2.time])
     }
     const addMilitaryList = (military: Military) => {
