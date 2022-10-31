@@ -10,5 +10,5 @@ export const militaryInitial : Military = {
 	active: true,
 	lastService: 0,
     horary: true,
-    dateOfService: "",
+    dateOfService: "2022-10-31T00:00:00.000",
 }
