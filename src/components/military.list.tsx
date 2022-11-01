@@ -5,8 +5,6 @@ import list from "./list.json"
 
 export const MilitaryList = () => {
     const [scale, setScale] = useState<string[]>([])
-    const [service1, setService1] = useState<Military>(militaryInitial)
-    const [service2, setService2] = useState<Military>(militaryInitial)
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
 
     const couting = (activation: boolean): number => {
@@ -17,12 +15,12 @@ export const MilitaryList = () => {
     const nextService = (militaries: Military[]): Military => {
         let service: Military = militaryInitial
         militaries?.map(element => {
-            if (element.active && element.lastService >= service.lastService) {
-                if (element.lastService == service.lastService) {
+            if (element.active && new Date(element.dateOfService).getTime() >= new Date(service.dateOfService).getTime()) {
+                if (new Date(element.dateOfService).getTime() == new Date(service.lastService).getTime()) {
                     if (element.antique > service.antique) {
                         service = element
                     }
-                } else if (element.lastService != 7) {
+                } else if (new Date(element.lastService).getTime() != new Date(new Date().setDate(new Date().getDate() - 7)).getTime()) {
                     service = element
                 }
             }
@@ -38,22 +36,15 @@ export const MilitaryList = () => {
             return !original.horary
         }
     }
-    const assign = () => {
-        let service1: Military = nextService(militaryList)
-        let service2: Military = nextService(militaryList.filter(item => item !== service1))
-        service1.lastService = 0
-        service2.lastService = 0
-        service1.horary = nextTime(service1, service2)
-        service2.horary = !service1.horary
-        militaryList.filter(item => item !== service1 || item !== service2).map(element => {
+    const assign = (/*military: Military*/) => {
+        let service: Military = nextService(militaryList)
+        service.dateOfService = new Date().toString()
+        militaryList.filter(item => item !== service).map(element => {
             element.lastService += 1
+            element.dateOfService = new Date(new Date().setDate(new Date(element.dateOfService).getDate() + 1)).toString()
         })
-        addMilitaryList(service1)
-        addMilitaryList(service2)
-        setService1(service1)
-        setService2(service2)
-        console.log(new Date(new Date().setDate(new Date(service1.dateOfService).getDate() + 50)))
-        setScale([...scale, service1.name+" "+service1.horary, service2.name+" "+service2.horary])
+        addMilitaryList(service)
+        setScale([...scale, service.name+" "+service.dateOfService])
     }
     const addMilitaryList = (military: Military) => {
         setMilitaryList([...militaryList.filter(item => item != military), military])

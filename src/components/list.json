@@ -6,9 +6,9 @@
 		"nip": "00.0386.79",
 		"name": "FIDELIS",
 		"fullName": "ANDERSON FIDELIS COUTO",
-		"active": false,
+		"active": true,
 		"lastService": 3,
-		"horary": true,
+		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
 	{
@@ -20,7 +20,7 @@
 		"fullName": "MARCELO RIBEIRO GADELHA",
 		"active": true,
 		"lastService": 2,
-		"horary": true,
+		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
 	{
@@ -30,7 +30,7 @@
 		"nip": "00.0160.98",
 		"name": "MILANEZ",
 		"fullName": "CARLOS MILANEZ FERNANDES",
-		"active": true,
+		"active": false,
 		"lastService": 8,
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
@@ -54,7 +54,7 @@
 		"nip": "09.0971.55",
 		"name": "ANDREA",
 		"fullName": "ANDREA OLIVEIRA ALCANTARA",
-		"active": true,
+		"active": false,
 		"lastService": 4,
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
@@ -66,7 +66,7 @@
 		"nip": "86.1698.23",
 		"name": "PEIXOTO",
 		"fullName": "JEFERSON LIMA PEIXOTO JUNIOR",
-		"active": true,
+		"active": false,
 		"lastService": 3,
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
