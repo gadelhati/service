@@ -6,7 +6,7 @@ export interface Military {
     name: string,
     fullName: string,
     active: boolean,
-    lastService: number,
+    lastService: string,
     horary: boolean,
     dateOfService: string,
 }

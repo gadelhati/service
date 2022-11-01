@@ -7,7 +7,7 @@
 		"name": "FIDELIS",
 		"fullName": "ANDERSON FIDELIS COUTO",
 		"active": true,
-		"lastService": 3,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -18,8 +18,8 @@
 		"nip": "00.0380.59",
 		"name": "GADELHA",
 		"fullName": "MARCELO RIBEIRO GADELHA",
-		"active": true,
-		"lastService": 2,
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -31,7 +31,7 @@
 		"name": "MILANEZ",
 		"fullName": "CARLOS MILANEZ FERNANDES",
 		"active": false,
-		"lastService": 8,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -43,7 +43,7 @@
 		"name": "CAVALCANTI",
 		"fullName": "TIAGO RIOS CAVALCANTI",
 		"active": false,
-		"lastService": 1,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -55,7 +55,7 @@
 		"name": "ANDREA",
 		"fullName": "ANDREA OLIVEIRA ALCANTARA",
 		"active": false,
-		"lastService": 4,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -67,7 +67,7 @@
 		"name": "PEIXOTO",
 		"fullName": "JEFERSON LIMA PEIXOTO JUNIOR",
 		"active": false,
-		"lastService": 3,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -78,8 +78,8 @@
 		"nip": "06.0389.48",
 		"name": "NEVES",
 		"fullName": "THIAGO NEVES MAGALHÃES",
-		"active": true,
-		"lastService": 1,
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -90,8 +90,8 @@
 		"nip": "07.3555.13",
 		"name": "CRISOSTOMO",
 		"fullName": "JEAN DA SILVA CRISOSTOMO",
-		"active": true,
-		"lastService": 2,
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -102,8 +102,8 @@
 		"nip": "12.1414.61",
 		"name": "PATRÍCIA",
 		"fullName": "PATRÍCIA COUTO BOMFIM JANUARIO",
-		"active": true,
-		"lastService": 5,
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -114,8 +114,8 @@
 		"nip": "86.6755.32",
 		"name": "PRISCILA",
 		"fullName": "PRISCILA CARDOSO DOS SANTOS",
-		"active": true,
-		"lastService": 2,
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -127,7 +127,7 @@
 		"name": "COSTA",
 		"fullName": "DIEGO SIQUEIRA COSTA",
 		"active": true,
-		"lastService": 4,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -139,7 +139,7 @@
 		"name": "JÉSSICA",
 		"fullName": "JÉSSICA DA SILVA GUIMARÃES",
 		"active": true,
-		"lastService": 5,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-29T00:00:00.000"
 	},
@@ -151,7 +151,7 @@
 		"name": "VENTURA",
 		"fullName": "FILIPE MARQUES VENTURA DOS SANTOS",
 		"active": true,
-		"lastService": 9,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -163,7 +163,7 @@
 		"name": "ARIANE",
 		"fullName": "ARIANE COELHO PINTO",
 		"active": true,
-		"lastService": 9,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -175,7 +175,7 @@
 		"name": "AUGUSTO",
 		"fullName": "MATEUS AUGUSTO COELHO QUEIROZ PINTO",
 		"active": true,
-		"lastService": 4,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": true,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	},
@@ -187,7 +187,7 @@
 		"name": "FLORENTINO",
 		"fullName": "RODRIGO SOUZA FLORENTINO",
 		"active": true,
-		"lastService": 9,
+		"lastService": "2022-10-31T00:00:00.000",
 		"horary": false,
 		"dateOfService": "2022-10-31T00:00:00.000"
 	}
