@@ -15,6 +15,8 @@ export const MilitaryList = () => {
     const nextService = (militaries: Military[]): Military => {
         let militarOfService: Military = militaryInitial
         militaries?.map(element => {
+            console.log(element.name + ": \n" + element.dateOfService)
+            console.log("MILITARY: \n" + militarOfService.dateOfService)
             if (element.active && new Date(element.dateOfService).getTime() >= new Date(militarOfService.dateOfService).getTime()) {
                 if (new Date(element.dateOfService).getTime() == new Date(militarOfService.dateOfService).getTime()) {
                     if (element.antique > militarOfService.antique) {
@@ -40,14 +42,14 @@ export const MilitaryList = () => {
     }
     const assign = (date: Date): Military => {
         let militaryOfService: Military = nextService(militaryList)
-        militaryOfService.dateOfService = new Date().toString()
+        // militaryOfService.dateOfService = new Date().toISOString()
         // militaryList.filter(item => item !== militaryOfService).map(element => {
             // element.lastService += 1
             // if(element.name == "FLORENTINO") {
             //     console.log(element.dateOfService)
             // }
             // element.dateOfService = new Date(new Date().setDate(new Date(element.dateOfService).getDate() + 1)).toString()
-            militaryOfService.dateOfService = date.getTime().toString()
+            militaryOfService.dateOfService = date.toISOString()
         // })
         addMilitaryList(militaryOfService)
         return militaryOfService

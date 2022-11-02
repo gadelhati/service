@@ -8,7 +8,7 @@ export const militaryInitial : Military = {
     name: "",
     fullName: "",
 	active: true,
-	lastService: "1970-01-01T00:00:00.000",
+	lastService: "1970-01-01T00:00:00.000Z",
     horary: true,
-    dateOfService: "1970-01-01T00:00:00.000",
+    dateOfService: "1970-01-01T00:00:00.000Z",
 }

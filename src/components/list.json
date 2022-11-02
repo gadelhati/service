@@ -7,9 +7,9 @@
 		"name": "FIDELIS",
 		"fullName": "ANDERSON FIDELIS COUTO",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": false,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 1001613,
@@ -19,9 +19,9 @@
 		"name": "GADELHA",
 		"fullName": "MARCELO RIBEIRO GADELHA",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": false,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 1002055,
@@ -31,9 +31,9 @@
 		"name": "MILANEZ",
 		"fullName": "CARLOS MILANEZ FERNANDES",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 2000111,
@@ -43,9 +43,9 @@
 		"name": "CAVALCANTI",
 		"fullName": "TIAGO RIOS CAVALCANTI",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 2000112,
@@ -55,9 +55,9 @@
 		"name": "ANDREA",
 		"fullName": "ANDREA OLIVEIRA ALCANTARA",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 2000891,
@@ -67,9 +67,9 @@
 		"name": "PEIXOTO",
 		"fullName": "JEFERSON LIMA PEIXOTO JUNIOR",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 2000904,
@@ -79,9 +79,9 @@
 		"name": "NEVES",
 		"fullName": "THIAGO NEVES MAGALHÃES",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 2001208,
@@ -91,9 +91,9 @@
 		"name": "CRISOSTOMO",
 		"fullName": "JEAN DA SILVA CRISOSTOMO",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3000688,
@@ -103,9 +103,9 @@
 		"name": "PATRÍCIA",
 		"fullName": "PATRÍCIA COUTO BOMFIM JANUARIO",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3000365,
@@ -115,9 +115,9 @@
 		"name": "PRISCILA",
 		"fullName": "PRISCILA CARDOSO DOS SANTOS",
 		"active": false,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3000827,
@@ -127,9 +127,9 @@
 		"name": "COSTA",
 		"fullName": "DIEGO SIQUEIRA COSTA",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3001506,
@@ -139,9 +139,9 @@
 		"name": "JÉSSICA",
 		"fullName": "JÉSSICA DA SILVA GUIMARÃES",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-29T00:00:00.000"
+		"dateOfService": "2022-10-29T00:00:00.000Z"
 	},
 	{
 		"antique": 3001840,
@@ -151,9 +151,9 @@
 		"name": "VENTURA",
 		"fullName": "FILIPE MARQUES VENTURA DOS SANTOS",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3001948,
@@ -163,9 +163,9 @@
 		"name": "ARIANE",
 		"fullName": "ARIANE COELHO PINTO",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": false,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3999998,
@@ -175,9 +175,9 @@
 		"name": "AUGUSTO",
 		"fullName": "MATEUS AUGUSTO COELHO QUEIROZ PINTO",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 3999999,
@@ -187,8 +187,8 @@
 		"name": "FLORENTINO",
 		"fullName": "RODRIGO SOUZA FLORENTINO",
 		"active": true,
-		"lastService": "2022-10-31T00:00:00.000",
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": false,
-		"dateOfService": "2022-10-31T00:00:00.000"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	}
 ]
