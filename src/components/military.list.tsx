@@ -57,6 +57,6 @@ export const MilitaryList = () => {
     }
     return (
         <>
-            <button onClick={semanal} >Assign {couting(true)}</button>
+            <button onClick={semanal} >Escalar</button>
         </>)
 }
