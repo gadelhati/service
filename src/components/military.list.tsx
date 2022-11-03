@@ -47,11 +47,17 @@ export const MilitaryList = () => {
     const semanal = (): string => {
         let date = new Date(new Date().setDate(new Date().getDate() - 1))//Wed Nov 02 2022 01:38:56 GMT-0300 (Horário Padrão de Brasília)
         let military = militaryInitial
+        let military2 = militaryInitial
         scale.map((element, index) =>{
             military = nextService(militaryList, date)
-            military.dateOfService = new Date(date.setDate(date.getDate() + 1)).toISOString()//2022-11-03T05:06:04.899Z
+            military2 = nextService(militaryList.filter(item => item != military), date)
+            date = new Date(date.setDate(date.getDate() + 1))
+            military.dateOfService = new Date(date).toISOString()//2022-11-03T05:06:04.899Z
+            military2.dateOfService = new Date(date).toISOString()//2022-11-03T05:06:04.899Z
             addMilitaryList(military)
-            console.log(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + ": " + military.name)
+            addMilitaryList(military2)
+            console.log("1 " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + ": " + military.name)
+            console.log("2 " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + ": " + military2.name)
         })
         return ""
     }
