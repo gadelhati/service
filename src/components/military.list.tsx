@@ -4,7 +4,7 @@ import { Military } from "./military.interface"
 import list from "./list.json"
 
 export const MilitaryList = () => {
-    const [scale, setScale] = useState<string[]>(["","","","","","","","","",""])
+    const [scale, setScale] = useState<string[]>(["D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S"])
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
 
     const couting = (activation: boolean): number => {
@@ -12,20 +12,21 @@ export const MilitaryList = () => {
         militaryList?.map(element => { if (element.active == activation) return vector += 1 })
         return vector
     }
-    const nextService = (militaries: Military[]): Military => {
+    const nextService = (militaries: Military[], date: Date): Military => {
         let militarOfService: Military = militaryInitial
+        let datt: Date = new Date()
         militaries?.map(element => {
-            console.log(element.name + ": \n" + element.dateOfService)
-            console.log("MILITARY: \n" + militarOfService.dateOfService)
-            if (element.active && new Date(element.dateOfService).getTime() >= new Date(militarOfService.dateOfService).getTime()) {
-                if (new Date(element.dateOfService).getTime() == new Date(militarOfService.dateOfService).getTime()) {
-                    if (element.antique > militarOfService.antique) {
-                        militarOfService = element
+            if (element.active) {
+                if (new Date(element.dateOfService).getTime() <= new Date(militarOfService.dateOfService).getTime()) { //1669698924563<=1669785324563
+                    if (new Date(element.dateOfService).getTime() == new Date(militarOfService.dateOfService).getTime()) {
+                        if (element.antique > militarOfService.antique) {
+                            militarOfService = element
+                        }
+                    } else {
+                        if (new Date(element.dateOfService).getDate() !== new Date(datt.setDate(date.getDate() - 6)).getDate()) {
+                            militarOfService = element
+                        }
                     }
-                } else if (new Date(element.dateOfService).getTime() != new Date(new Date().setDate(new Date(element.dateOfService).getDate() - 7)).getTime()) {
-                    // console.log("1" + new Date(element.dateOfService).getTime())
-                    // console.log("2" + new Date(new Date().setDate(new Date(element.dateOfService).getDate() - 7)).getTime())
-                    militarOfService = element
                 }
             }
         })
@@ -40,37 +41,22 @@ export const MilitaryList = () => {
             return !original.horary
         }
     }
-    const assign = (date: Date): Military => {
-        let militaryOfService: Military = nextService(militaryList)
-        // militaryOfService.dateOfService = new Date().toISOString()
-        // militaryList.filter(item => item !== militaryOfService).map(element => {
-            // element.lastService += 1
-            // if(element.name == "FLORENTINO") {
-            //     console.log(element.dateOfService)
-            // }
-            // element.dateOfService = new Date(new Date().setDate(new Date(element.dateOfService).getDate() + 1)).toString()
-            militaryOfService.dateOfService = date.toISOString()
-        // })
-        addMilitaryList(militaryOfService)
-        return militaryOfService
-        // setScale([...scale, militaryOfService.name+" "+militaryOfService.dateOfService])
-    }
     const addMilitaryList = (military: Military) => {
         setMilitaryList([...militaryList.filter(item => item != military), military])
     }
     const semanal = (): string => {
-        let date = new Date(new Date().setDate(new Date().getDate() - 1))
+        let date = new Date(new Date().setDate(new Date().getDate() - 1))//Wed Nov 02 2022 01:38:56 GMT-0300 (Horário Padrão de Brasília)
+        let military = militaryInitial
         scale.map((element, index) =>{
-            // console.log("2: " + new Date(new Date().setDate(new Date().getDate() + index)))
-            console.log(assign(new Date(new Date().setDate(new Date().getDate() + 1))))
+            military = nextService(militaryList, date)
+            military.dateOfService = new Date(date.setDate(date.getDate() + 1)).toISOString()//2022-11-03T05:06:04.899Z
+            addMilitaryList(military)
+            console.log(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + ": " + military.name)
         })
         return ""
     }
     return (
         <>
             <button onClick={semanal} >Assign {couting(true)}</button>
-            {scale.map((element, index) =>
-                <p>{element}</p>
-            )}
         </>)
 }
