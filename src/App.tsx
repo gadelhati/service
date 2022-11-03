@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { Service } from './components/service'
 import { MilitaryList } from './components/military.list'
 
 function App() {

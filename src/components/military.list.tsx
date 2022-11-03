@@ -23,7 +23,7 @@ export const MilitaryList = () => {
                             militarOfService = element
                         }
                     } else {
-                        if (new Date(element.dateOfService).getDate() !== new Date(datt.setDate(date.getDate() - 6)).getDate()) {
+                        if (new Date(element.dateOfService).toISOString() !== new Date(datt.setDate(date.getDate() - 6)).toISOString()) {
                             militarOfService = element
                         }
                     }
