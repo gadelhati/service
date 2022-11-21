@@ -9,7 +9,8 @@
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-02T00:00:00.000Z"
+		"dateOfService": "2022-11-02T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 1000644,
@@ -21,7 +22,8 @@
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
+		"dateOfService": "2022-10-31T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 2000111,
@@ -33,7 +35,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-01T00:00:00.000Z"
+		"dateOfService": "2022-11-01T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 2000891,
@@ -45,7 +48,8 @@
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
+		"dateOfService": "2022-10-31T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 1002055,
@@ -57,7 +61,8 @@
 		"active": true,
 		"lastService": "2022-11-02T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-02T00:00:00.000Z"
+		"dateOfService": "2022-11-02T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 2001208,
@@ -69,7 +74,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-06T00:00:00.000Z"
+		"dateOfService": "2022-11-06T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3000688,
@@ -81,7 +87,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-05T00:00:00.000Z"
+		"dateOfService": "2022-11-05T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3000365,
@@ -93,7 +100,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-05T00:00:00.000Z"
+		"dateOfService": "2022-11-05T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3000827,
@@ -105,7 +113,8 @@
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
+		"dateOfService": "2022-10-31T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3001506,
@@ -117,7 +126,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-04T00:00:00.000Z"
+		"dateOfService": "2022-11-04T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 2000112,
@@ -129,7 +139,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-06T00:00:00.000Z"
+		"dateOfService": "2022-11-06T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3001840,
@@ -141,7 +152,8 @@
 		"active": true,
 		"lastService": "2022-11-04T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-04T00:00:00.000Z"
+		"dateOfService": "2022-11-04T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3001948,
@@ -153,7 +165,8 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-03T00:00:00.000Z"
+		"dateOfService": "2022-11-03T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3999998,
@@ -165,7 +178,8 @@
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
+		"dateOfService": "2022-10-31T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 2000904,
@@ -177,7 +191,8 @@
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
+		"dateOfService": "2022-10-31T00:00:00.000Z",
+		"divisionOfService": 0
 	},
 	{
 		"antique": 3999999,
@@ -189,6 +204,7 @@
 		"active": true,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-03T00:00:00.000Z"
+		"dateOfService": "2022-11-03T00:00:00.000Z",
+		"divisionOfService": 0
 	}
 ]

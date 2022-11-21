@@ -12,4 +12,5 @@ export const militaryInitial : Military = {
     horary: true,
     // dateOfService: "1970-01-01T00:00:00.000Z",
     dateOfService: "3000-12-31T00:00:00.000Z",
+    divisionOfService: 0,
 }

@@ -9,4 +9,5 @@ export interface Military {
     lastService: string,
     horary: boolean,
     dateOfService: string,
+    divisionOfService: number,
 }

@@ -26,28 +26,23 @@ export const MilitaryList = () => {
     const showList = () => {
         console.log(militaryList)
     }
-    const composeDivision = (vector: Military[]) => {
+    const composeDivision = (vector: Military[], division2: Military[][]) => {
         let total: number = Math.floor(vector.length / 5)
         let rest: number = vector.length % 5
         let i: number = 0
-        let count: number = 0
         for (i = 0; i < vector.length; i = i + total + rest) {
             if (rest > 0) {
-                division.push(vector.slice(i, i + total + 1))
+                division2.push(vector.slice(i, i + total + 1))
                 rest--
                 if (rest == 0) { i++ }
             }
             else {
-                division.push(vector.slice(i, i + total))
+                division2.push(vector.slice(i, i + total))
             }
-            // console.log("count: " + count)
-            console.log("military: " + militaryList[i].name + " - " +count)
-            militaryList[i].divisionOfService = count
-            setMilitaryList([...militaryList.filter(element=>element.nip!==militaryList[i].nip), militaryList[i]] )
-            count += 1
         }
     }
     const showDivision = () => {
+        composeDivision(militaryList, division)
         console.log(division)
     }
     const couting = (activation: boolean): number => {
@@ -116,8 +111,8 @@ export const MilitaryList = () => {
         <>
             <button onClick={sort} >1 - Sort List</button>
             <button onClick={showList} >2 - Show List</button>
-            <button onClick={() => composeDivision(militaryList)} >{couting(true)}/{militaryList.length} - Compose Division</button>
-            <button onClick={showDivision} >Show Division</button>
+            {/* <button onClick={() => composeDivision(militaryList, division)} >{couting(true)}/{militaryList.length} - Compose Division</button> */}
+            <button onClick={showDivision} >{couting(true)}/{militaryList.length} - Show Division</button>
             <button onClick={() => nextDivisionOfService(militaryList, new Date())} >Next Division</button>
             
             <button onClick={semanal} >Escalar</button>
