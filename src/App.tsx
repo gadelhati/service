@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { MilitaryList } from './components/military.list'
+import { MilitaryList } from './containers/military.list'
 
 function App() {
 	const [count, setCount] = useState(0)
@@ -19,7 +19,7 @@ function App() {
 			</div>
 			<h1>Creuza</h1>
 			<p className="read-the-docs">
-				Nossa detalhista virtual
+				Nossa detalhista virtual, Carol Anne
 			</p>
 		</div>
 	)

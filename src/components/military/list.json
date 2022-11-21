@@ -1,17 +1,5 @@
 [
 	{
-		"antique": 1000644,
-		"graduation": "1ºSG",
-		"specialty": "FR",
-		"nip": "00.0386.79",
-		"name": "FIDELIS",
-		"fullName": "ANDERSON FIDELIS COUTO",
-		"active": false,
-		"lastService": "2022-10-31T00:00:00.000Z",
-		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
-	},
-	{
 		"antique": 1001613,
 		"graduation": "1ºSG",
 		"specialty": "HN",
@@ -24,16 +12,16 @@
 		"dateOfService": "2022-11-02T00:00:00.000Z"
 	},
 	{
-		"antique": 1002055,
+		"antique": 1000644,
 		"graduation": "1ºSG",
-		"specialty": "EL",
-		"nip": "00.0160.98",
-		"name": "MILANEZ",
-		"fullName": "CARLOS MILANEZ FERNANDES",
-		"active": true,
-		"lastService": "2022-11-02T00:00:00.000Z",
+		"specialty": "FR",
+		"nip": "00.0386.79",
+		"name": "FIDELIS",
+		"fullName": "ANDERSON FIDELIS COUTO",
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-11-02T00:00:00.000Z"
+		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
 		"antique": 2000111,
@@ -48,18 +36,6 @@
 		"dateOfService": "2022-11-01T00:00:00.000Z"
 	},
 	{
-		"antique": 2000112,
-		"graduation": "2ºSG",
-		"specialty": "PD",
-		"nip": "09.0971.55",
-		"name": "ANDREA",
-		"fullName": "ANDREA OLIVEIRA ALCANTARA",
-		"active": true,
-		"lastService": "2022-10-31T00:00:00.000Z",
-		"horary": true,
-		"dateOfService": "2022-11-06T00:00:00.000Z"
-	},
-	{
 		"antique": 2000891,
 		"graduation": "2ºSG",
 		"specialty": "PD",
@@ -72,16 +48,16 @@
 		"dateOfService": "2022-10-31T00:00:00.000Z"
 	},
 	{
-		"antique": 2000904,
-		"graduation": "2ºSG",
-		"specialty": "PD",
-		"nip": "06.0389.48",
-		"name": "NEVES",
-		"fullName": "THIAGO NEVES MAGALHÃES",
-		"active": false,
-		"lastService": "2022-10-31T00:00:00.000Z",
+		"antique": 1002055,
+		"graduation": "1ºSG",
+		"specialty": "EL",
+		"nip": "00.0160.98",
+		"name": "MILANEZ",
+		"fullName": "CARLOS MILANEZ FERNANDES",
+		"active": true,
+		"lastService": "2022-11-02T00:00:00.000Z",
 		"horary": true,
-		"dateOfService": "2022-10-31T00:00:00.000Z"
+		"dateOfService": "2022-11-02T00:00:00.000Z"
 	},
 	{
 		"antique": 2001208,
@@ -144,6 +120,18 @@
 		"dateOfService": "2022-11-04T00:00:00.000Z"
 	},
 	{
+		"antique": 2000112,
+		"graduation": "2ºSG",
+		"specialty": "PD",
+		"nip": "09.0971.55",
+		"name": "ANDREA",
+		"fullName": "ANDREA OLIVEIRA ALCANTARA",
+		"active": true,
+		"lastService": "2022-10-31T00:00:00.000Z",
+		"horary": true,
+		"dateOfService": "2022-11-06T00:00:00.000Z"
+	},
+	{
 		"antique": 3001840,
 		"graduation": "3ºSG",
 		"specialty": "PD",
@@ -174,6 +162,18 @@
 		"nip": "14.1472.03",
 		"name": "AUGUSTO",
 		"fullName": "MATEUS AUGUSTO COELHO QUEIROZ PINTO",
+		"active": false,
+		"lastService": "2022-10-31T00:00:00.000Z",
+		"horary": true,
+		"dateOfService": "2022-10-31T00:00:00.000Z"
+	},
+	{
+		"antique": 2000904,
+		"graduation": "2ºSG",
+		"specialty": "PD",
+		"nip": "06.0389.48",
+		"name": "NEVES",
+		"fullName": "THIAGO NEVES MAGALHÃES",
 		"active": false,
 		"lastService": "2022-10-31T00:00:00.000Z",
 		"horary": true,
