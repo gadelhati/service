@@ -4,7 +4,7 @@ import { Military } from "../components/military/military.interface"
 import list from "../components/military/list.json"
 
 export const MilitaryList = () => {
-    const [scale, setScale] = useState<string[]>(["D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S","D","S","T","Q","Q","S","S"])
+    const [scale, setScale] = useState<string[]>(["D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S"])
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
     const [division, setDivision] = useState<Military[][]>([])
 
@@ -26,21 +26,21 @@ export const MilitaryList = () => {
     const showList = () => {
         console.log(militaryList)
     }
-    const composeDivision = () => {
-        let total: number = Math.floor(militaryList.length/5)
-        let rest: number = militaryList.length % 5
+    const composeDivision = (vector: Military[]) => {
+        let total: number = Math.floor(vector.length / 5)
+        let rest: number = vector.length % 5
         let i: number = 0
         let aux: number = 0
-        for (i = 0; i < militaryList.length; i = i + total + rest) {
-                aux = i + total
-                if(rest > 0) {
-                    division.push(militaryList.slice(i, aux + 1))
-                    rest--
-                    if(rest == 0){i++}
-                }
-                else {
-                    division.push(militaryList.slice(i, aux))
-                }
+        for (i = 0; i < vector.length; i = i + total + rest) {
+            aux = i + total
+            if (rest > 0) {
+                division.push(vector.slice(i, aux + 1))
+                rest--
+                if (rest == 0) { i++ }
+            }
+            else {
+                division.push(vector.slice(i, aux))
+            }
         }
     }
     const showDivision = () => {
@@ -51,7 +51,16 @@ export const MilitaryList = () => {
         militaryList?.map(element => { if (element.active == activation) return vector += 1 })
         return vector
     }
-    
+
+    const nextDivisionOfService = (militaries: Military[], date: Date): Military => {
+        let militaryOfService: Military = militaryInitial
+        // let date: Date = new Date()
+        militaries.map(element => {
+            console.log(element.name)
+        })
+        return militaryOfService
+    }
+
     const nextService = (militaries: Military[], date: Date): Military => {
         let militarOfService: Military = militaryInitial
         let datt: Date = new Date()
@@ -76,7 +85,7 @@ export const MilitaryList = () => {
         let militarOfService: Military = militaryInitial
         militaries?.map(element => {
             if (element.active) {
-                if (element.antique < militarOfService.antique && militarOfService ! == militaryInitial) {
+                if (element.antique < militarOfService.antique && militarOfService! == militaryInitial) {
                     militarOfService = element
                 }
             }
@@ -84,9 +93,9 @@ export const MilitaryList = () => {
         return militarOfService
     }
     const nextTime = (original: Military, teste: Military): boolean => {
-        if(original.horary !== teste.horary) {
+        if (original.horary !== teste.horary) {
             return !original.horary
-        } else if(original.antique > teste.antique) {
+        } else if (original.antique > teste.antique) {
             return original.horary
         } else {
             return !original.horary
@@ -103,8 +112,10 @@ export const MilitaryList = () => {
         <>
             <button onClick={sort} >1 - Sort List</button>
             <button onClick={showList} >2 - Show List</button>
-            <button onClick={composeDivision} >{couting(true)}/{militaryList.length} - Compose Division</button>
+            <button onClick={() => composeDivision(militaryList)} >{couting(true)}/{militaryList.length} - Compose Division</button>
             <button onClick={showDivision} >Show Division</button>
+            <button onClick={() => nextDivisionOfService(militaryList, new Date())} >Next Division</button>
+            
             <button onClick={semanal} >Escalar</button>
         </>)
 }
