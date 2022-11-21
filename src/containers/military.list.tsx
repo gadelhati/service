@@ -30,17 +30,21 @@ export const MilitaryList = () => {
         let total: number = Math.floor(vector.length / 5)
         let rest: number = vector.length % 5
         let i: number = 0
-        let aux: number = 0
+        let count: number = 0
         for (i = 0; i < vector.length; i = i + total + rest) {
-            aux = i + total
             if (rest > 0) {
-                division.push(vector.slice(i, aux + 1))
+                division.push(vector.slice(i, i + total + 1))
                 rest--
                 if (rest == 0) { i++ }
             }
             else {
-                division.push(vector.slice(i, aux))
+                division.push(vector.slice(i, i + total))
             }
+            // console.log("count: " + count)
+            console.log("military: " + militaryList[i].name + " - " +count)
+            militaryList[i].divisionOfService = count
+            setMilitaryList([...militaryList.filter(element=>element.nip!==militaryList[i].nip), militaryList[i]] )
+            count += 1
         }
     }
     const showDivision = () => {
@@ -56,7 +60,7 @@ export const MilitaryList = () => {
         let militaryOfService: Military = militaryInitial
         // let date: Date = new Date()
         militaries.map(element => {
-            console.log(element.name)
+            console.log(element.name + " - " +element.divisionOfService)
         })
         return militaryOfService
     }
