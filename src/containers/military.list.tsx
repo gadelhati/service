@@ -7,6 +7,7 @@ export const MilitaryList = () => {
     const [scale, setScale] = useState<string[]>(["D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S"])
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
     const [division, setDivision] = useState<Military[][]>([])
+    const [military, setMilitary] = useState<Military>(militaryInitial)
 
     const quickSort = (array: Military[]): Military[] => {
         if (array.length <= 1) {
@@ -26,46 +27,33 @@ export const MilitaryList = () => {
     const showList = () => {
         console.log(militaryList)
     }
-    const composeDivision = (vector: Military[], division2: Military[][]) => {
+    const composeDivision = (vector: Military[]): Military [][] => {
+        let division: Military [][] = []
         let total: number = Math.floor(vector.length / 5)
         let rest: number = vector.length % 5
         let i: number = 0
         for (i = 0; i < vector.length; i = i + total + rest) {
             if (rest > 0) {
-                division2.push(vector.slice(i, i + total + 1))
+                division.push(vector.slice(i, i + total + 1))
                 rest--
                 if (rest == 0) { i++ }
             }
             else {
-                division2.push(vector.slice(i, i + total))
+                division.push(vector.slice(i, i + total))
             }
         }
+        setDivision(division)
+        return division
     }
     const showDivision = () => {
-        composeDivision(militaryList, division)
         console.log(division)
     }
-    const couting = (activation: boolean): number => {
-        let vector: number = 0
-        militaryList?.map(element => { if (element.active == activation) return vector += 1 })
-        return vector
-    }
-
-    const nextDivisionOfService = (militaries: Military[], date: Date): Military => {
-        let militaryOfService: Military = militaryInitial
-        // let date: Date = new Date()
-        militaries.map(element => {
-            console.log(element.name + " - " +element.divisionOfService)
-        })
-        return militaryOfService
-    }
-
-    const nextService = (militaries: Military[], date: Date): Military => {
+    const nextDivisionMilitary = (militaries: Military[], date: Date): Military => {
         let militarOfService: Military = militaryInitial
         let datt: Date = new Date()
         militaries?.map(element => {
-            if (element.active) {
-                if (new Date(element.dateOfService).getTime() <= new Date(militarOfService.dateOfService).getTime()) { //1669698924563<=1669785324563
+            // if (element.active) {
+                if (new Date(element.dateOfService).getTime() <= new Date(militarOfService.dateOfService).getTime()) {
                     if (new Date(element.dateOfService).getTime() == new Date(militarOfService.dateOfService).getTime()) {
                         if (element.antique > militarOfService.antique) {
                             militarOfService = element
@@ -76,10 +64,36 @@ export const MilitaryList = () => {
                         }
                     }
                 }
-            }
+            // }
         })
+        let date2 = new Date()
+        militarOfService.dateOfService = new Date(date2.getFullYear(), date2.getDate(), date2.getMonth()+1, 0, 0, 0).toString()
+        setMilitary(militarOfService)
+        // setDivision(division)
+        setMilitaryList([...militaryList.filter(item => item.nip != militarOfService.nip), militarOfService])
+        // setDivision([...militaryList.filter(item => item.nip != militarOfService.nip), militarOfService])
         return militarOfService
     }
+    const showNextDivision = () => {
+        for(let i = 0; i<5 ; i++) {
+            console.log(nextDivisionMilitary(division[i], new Date()))
+        }
+    }
+
+    const couting = (activation: boolean): number => {
+        let vector: number = 0
+        militaryList?.map(element => { if (element.active == activation) return vector += 1 })
+        return vector
+    }
+    const nextDivisionOfService = (militaries: Military[], date: Date): Military => {
+        let militaryOfService: Military = militaryInitial
+        // let date: Date = new Date()
+        militaries.map(element => {
+            console.log(element.name + " - " +element.divisionOfService)
+        })
+        return militaryOfService
+    }
+
     const nextServiceByAntique = (militaries: Military[]): Military => {
         let militarOfService: Military = militaryInitial
         militaries?.map(element => {
@@ -109,10 +123,12 @@ export const MilitaryList = () => {
 
     return (
         <>
-            <button onClick={sort} >1 - Sort List</button>
-            <button onClick={showList} >2 - Show List</button>
-            {/* <button onClick={() => composeDivision(militaryList, division)} >{couting(true)}/{militaryList.length} - Compose Division</button> */}
-            <button onClick={showDivision} >{couting(true)}/{militaryList.length} - Show Division</button>
+            <button onClick={sort} >1</button>
+            <button onClick={showList} >2</button>
+            <button onClick={() => composeDivision(militaryList)} >3</button>
+            <button onClick={showDivision} >4</button>
+            <button onClick={showNextDivision} >Next Division Military</button>
+
             <button onClick={() => nextDivisionOfService(militaryList, new Date())} >Next Division</button>
             
             <button onClick={semanal} >Escalar</button>
