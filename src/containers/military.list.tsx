@@ -52,22 +52,19 @@ export const MilitaryList = () => {
         let militarOfService: Military = militaryInitial
         let datt: Date = new Date()
         militaries?.map(element => {
-            // if (element.active) {
-                if (new Date(element.dateOfService).getTime() <= new Date(militarOfService.dateOfService).getTime()) {
-                    if (new Date(element.dateOfService).getTime() == new Date(militarOfService.dateOfService).getTime()) {
-                        if (element.antique > militarOfService.antique) {
-                            militarOfService = element
-                        }
-                    } else {
-                        if (new Date(element.dateOfService).toISOString() !== new Date(datt.setDate(date.getDate() - 6)).toISOString()) {
-                            militarOfService = element
-                        }
+            if (new Date(element.dateOfService).toISOString() <= new Date(militarOfService.dateOfService).toISOString()) {
+                if (new Date(element.dateOfService).toISOString() == new Date(militarOfService.dateOfService).toISOString()) {
+                    if (element.antique > militarOfService.antique) {
+                        militarOfService = element
+                    }
+                } else {
+                    if (new Date(element.dateOfService).toISOString() !== new Date(datt.setDate(date.getDate() - 6)).toISOString()) {
+                        militarOfService = element
                     }
                 }
-            // }
+            }
         })
-        let date2 = new Date()
-        militarOfService.dateOfService = new Date(date2.getFullYear(), date2.getDate(), date2.getMonth()+1, 0, 0, 0).toString()
+        militarOfService.dateOfService = new Date().toISOString().toString()
         setMilitary(militarOfService)
         // setDivision(division)
         setMilitaryList([...militaryList.filter(item => item.nip != militarOfService.nip), militarOfService])
@@ -76,13 +73,18 @@ export const MilitaryList = () => {
     }
     const showNextDivision = () => {
         for(let i = 0; i<5 ; i++) {
-            console.log(nextDivisionMilitary(division[i], new Date()))
+            console.log(nextDivisionMilitary(division[i], new Date()).name)
         }
     }
 
     const couting = (activation: boolean): number => {
         let vector: number = 0
         militaryList?.map(element => { if (element.active == activation) return vector += 1 })
+        return vector
+    }
+    const listing = (activation: boolean): Military[] => {
+        let vector: Military[] = []
+        militaryList?.map(element => { if (element.active == activation) return vector.push(element) })
         return vector
     }
     const nextDivisionOfService = (militaries: Military[], date: Date): Military => {
@@ -92,18 +94,6 @@ export const MilitaryList = () => {
             console.log(element.name + " - " +element.divisionOfService)
         })
         return militaryOfService
-    }
-
-    const nextServiceByAntique = (militaries: Military[]): Military => {
-        let militarOfService: Military = militaryInitial
-        militaries?.map(element => {
-            if (element.active) {
-                if (element.antique < militarOfService.antique && militarOfService! == militaryInitial) {
-                    militarOfService = element
-                }
-            }
-        })
-        return militarOfService
     }
     const nextTime = (original: Military, teste: Military): boolean => {
         if (original.horary !== teste.horary) {
@@ -123,13 +113,14 @@ export const MilitaryList = () => {
 
     return (
         <>
+            {couting(false)+"/"+couting(true)}
             <button onClick={sort} >1</button>
             <button onClick={showList} >2</button>
-            <button onClick={() => composeDivision(militaryList)} >3</button>
+            <button onClick={() => composeDivision(listing(true))} >3</button>
             <button onClick={showDivision} >4</button>
             <button onClick={showNextDivision} >Next Division Military</button>
 
-            <button onClick={() => nextDivisionOfService(militaryList, new Date())} >Next Division</button>
+            <button onClick={() => nextDivisionOfService(listing(true), new Date())} >Next Division</button>
             
             <button onClick={semanal} >Escalar</button>
         </>)
