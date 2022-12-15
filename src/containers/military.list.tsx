@@ -45,6 +45,41 @@ export const MilitaryList = () => {
         setDivision(division)
         return division
     }
+    const show = (vector: Military[]): Military [][] => {
+        let division: Military [][] = []
+        let total: number = Math.floor(vector.length / 5)
+        let rest: number = vector.length % 5
+        let i: number = 0
+        let j: number = 0
+        let count: number = 0
+        for (i = 0; i < vector.length; i ++) {
+            console.log("Divisão:" + count + "+" + rest)
+            if(count == total){
+                // count = 0
+                for(let j = count;j>=0;j--){
+                    console.log(j)
+                    // console.log(vector[i].name)
+                }
+                count = j
+            }else {
+                // console.log(vector[i].name)
+                count ++
+            }
+            if(rest != 0) {
+                rest --
+            }
+            // if (rest > 0) {
+            //     division.push(vector.slice(i, i + total + 1))
+            //     rest--
+            //     if (rest == 0) { i++ }
+            // }
+            // else {
+            //     division.push(vector.slice(i, i + total))
+            // }
+        }
+        // setDivision(division)
+        return division
+    }
     const showDivision = () => {
         console.log(division)
     }
@@ -123,5 +158,6 @@ export const MilitaryList = () => {
             <button onClick={() => nextDivisionOfService(listing(true), new Date())} >Next Division</button>
             
             <button onClick={semanal} >Escalar</button>
+            <button onClick={() => show(listing(true))} >GG</button>
         </>)
 }
