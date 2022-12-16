@@ -27,57 +27,25 @@ export const MilitaryList = () => {
     const showList = () => {
         console.log(militaryList)
     }
-    const composeDivision = (vector: Military[]): Military [][] => {
-        let division: Military [][] = []
+    const composeDivisions = (vector: Military[]): Military [][] => {
+        let division = []
         let total: number = Math.floor(vector.length / 5)
         let rest: number = vector.length % 5
-        let i: number = 0
-        for (i = 0; i < vector.length; i = i + total + rest) {
-            if (rest > 0) {
-                division.push(vector.slice(i, i + total + 1))
-                rest--
-                if (rest == 0) { i++ }
-            }
-            else {
-                division.push(vector.slice(i, i + total))
+        let count: number = 0
+        let inicio: number = 0
+        for (let i = 0; i < vector.length; i ++) {
+            if(count == total-1 + (rest > 0? 1:0)) {
+                count = 0
+                division.push(vector.slice(inicio, i + 1))
+                inicio = i + 1
+                if(rest != 0) {
+                    rest --
+                }
+            } else {
+                count++
             }
         }
         setDivision(division)
-        return division
-    }
-    const show = (vector: Military[]): Military [][] => {
-        let division: Military [][] = []
-        let total: number = Math.floor(vector.length / 5)
-        let rest: number = vector.length % 5
-        let i: number = 0
-        let j: number = 0
-        let count: number = 0
-        for (i = 0; i < vector.length; i ++) {
-            console.log("Divisão:" + count + "+" + rest)
-            if(count == total){
-                // count = 0
-                for(let j = count;j>=0;j--){
-                    console.log(j)
-                    // console.log(vector[i].name)
-                }
-                count = j
-            }else {
-                // console.log(vector[i].name)
-                count ++
-            }
-            if(rest != 0) {
-                rest --
-            }
-            // if (rest > 0) {
-            //     division.push(vector.slice(i, i + total + 1))
-            //     rest--
-            //     if (rest == 0) { i++ }
-            // }
-            // else {
-            //     division.push(vector.slice(i, i + total))
-            // }
-        }
-        // setDivision(division)
         return division
     }
     const showDivision = () => {
@@ -122,6 +90,7 @@ export const MilitaryList = () => {
         militaryList?.map(element => { if (element.active == activation) return vector.push(element) })
         return vector
     }
+    
     const nextDivisionOfService = (militaries: Military[], date: Date): Military => {
         let militaryOfService: Military = militaryInitial
         // let date: Date = new Date()
@@ -149,15 +118,14 @@ export const MilitaryList = () => {
     return (
         <>
             {couting(false)+"/"+couting(true)}
-            <button onClick={sort} >1</button>
-            <button onClick={showList} >2</button>
-            <button onClick={() => composeDivision(listing(true))} >3</button>
-            <button onClick={showDivision} >4</button>
+            <button onClick={sort} >1 sort</button>
+            <button onClick={showList} >2 show</button>
+            <button onClick={()=>composeDivisions(listing(true))} >3 compose</button>
+            <button onClick={showDivision} >4 show</button>
             <button onClick={showNextDivision} >Next Division Military</button>
 
             <button onClick={() => nextDivisionOfService(listing(true), new Date())} >Next Division</button>
             
             <button onClick={semanal} >Escalar</button>
-            <button onClick={() => show(listing(true))} >GG</button>
         </>)
 }
