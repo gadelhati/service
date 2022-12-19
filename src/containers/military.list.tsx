@@ -1,14 +1,17 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { militaryInitial } from "../components/military/military.initial"
 import { Military } from "../components/military/military.interface"
 import list from "../components/military/list.json"
 
 export const MilitaryList = () => {
-    const [scale, setScale] = useState<string[]>(["D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S", "D", "S", "T", "Q", "Q", "S", "S"])
+    const [scale, setScale] = useState<string[]>(["D", "S", "T", "Q", "Q", "S", "S"])
     const [militaryList, setMilitaryList] = useState<Military[]>(list)
     const [division, setDivision] = useState<Military[][]>([])
     const [military, setMilitary] = useState<Military>(militaryInitial)
 
+    useEffect(() => {
+        
+    }, [militaryList, division]);
     const quickSort = (array: Military[]): Military[] => {
         if (array.length <= 1) {
             return array;
@@ -51,6 +54,7 @@ export const MilitaryList = () => {
     const showDivision = () => {
         console.log(division)
     }
+
     const nextDivisionMilitary = (militaries: Military[], date: Date): Military => {
         let militarOfService: Military = militaryInitial
         let datt: Date = new Date()
@@ -74,9 +78,36 @@ export const MilitaryList = () => {
         // setDivision([...militaryList.filter(item => item.nip != militarOfService.nip), militarOfService])
         return militarOfService
     }
-    const showNextDivision = () => {
+    const semanal = () => {
         for(let i = 0; i<5 ; i++) {
             console.log(nextDivisionMilitary(division[i], new Date()).name)
+        }
+    }
+
+    const nextDivisionMilitary2 = (militaries: Military[], date: Date): Military => {
+        let militarOfService: Military = militaryInitial
+        let datt: Date = new Date()
+        militaries?.map(element => {
+            if (new Date(element.dateOfService).toISOString() <= new Date(militarOfService.dateOfService).toISOString()) {
+                if (new Date(element.dateOfService).toISOString() == new Date(militarOfService.dateOfService).toISOString()) {
+                    if (element.antique > militarOfService.antique) {
+                        militarOfService = element
+                    }
+                } else {
+                    if (new Date(element.dateOfService).toISOString() !== new Date(datt.setDate(date.getDate() - 6)).toISOString()) {
+                        militarOfService = element
+                    }
+                }
+            }
+        })
+        militarOfService.dateOfService = new Date().toISOString().toString()
+        setMilitary(militarOfService)
+        setMilitaryList([...militaryList.filter(item => item.nip != militarOfService.nip), militarOfService])
+        return militarOfService
+    }
+    const semanal2 = () => {
+        for(let i = 0; i<5 ; i++) {
+            console.log(nextDivisionMilitary2(division[i], new Date()).name)
         }
     }
 
@@ -90,7 +121,7 @@ export const MilitaryList = () => {
         militaryList?.map(element => { if (element.active == activation) return vector.push(element) })
         return vector
     }
-    
+
     const nextDivisionOfService = (militaries: Military[], date: Date): Military => {
         let militaryOfService: Military = militaryInitial
         // let date: Date = new Date()
@@ -111,9 +142,6 @@ export const MilitaryList = () => {
     const addMilitaryList = (military: Military) => {
         setMilitaryList([...militaryList.filter(item => item != military), military])
     }
-    const semanal = (): string => {
-        return ""
-    }
 
     return (
         <>
@@ -122,10 +150,8 @@ export const MilitaryList = () => {
             <button onClick={showList} >2 show</button>
             <button onClick={()=>composeDivisions(listing(true))} >3 compose</button>
             <button onClick={showDivision} >4 show</button>
-            <button onClick={showNextDivision} >Next Division Military</button>
+            <button onClick={semanal2} >semanal 2</button>
 
             <button onClick={() => nextDivisionOfService(listing(true), new Date())} >Next Division</button>
-            
-            <button onClick={semanal} >Escalar</button>
         </>)
 }
